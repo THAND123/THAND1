@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Service Listings</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .listing-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .listing-item {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      padding: 1rem;
+      color: #333;
+    }
+
+    .listing-item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .listing-details {
+      margin-left: 1.5rem;
+      max-width: 700px;
+    }
+
+    .listing-details h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #e65100;
+    }
+
+    .listing-details p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .toggle-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background-color: #e65100;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .toggle-btn:hover {
+      background-color: #ff9800;
+    }
+
+    .contact-info {
+      display: none;
+      margin-top: 0.7rem;
+      background-color: #f5f5f5;
+      color: #333;
+      padding: 0.6rem;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffe0b2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Customer Service Listings</h1>
+
+  <div class="listing-container">
+    <!-- Listing 1 -->
+    <div class="listing-item">
+      <img src="JobImages/call1.jpg" alt="Customer Support Specialist">
+      <div class="listing-details">
+        <h2>Customer Support Specialist</h2>
+        <p>Our customer support specialists are dedicated to providing efficient and effective solutions for all your inquiries. Whether it's troubleshooting technical issues, providing product information, or assisting with returns and exchanges, our team is here to ensure a smooth and hassle-free experience for every customer.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact1')">Contact Agent</span>
+        <div id="contact1" class="contact-info">
+          <strong>Contact:</strong> Amanda Reed<br>
+          Phone: (555) 657-4398<br>
+          Email: amanda.reed@customersupport.com
+        </div>
+      </div>
+    </div>
+
+    <!-- Listing 2 -->
+    <div class="listing-item">
+      <img src="JobImages/call2.jpg" alt="Call Center Representative">
+      <div class="listing-details">
+        <h2>Call Center Representative</h2>
+        <p>Our call center representatives are trained to handle a wide range of customer service needs, from order tracking to general inquiries. With a commitment to providing timely and accurate support, our team ensures that every interaction is positive and solutions-driven, enhancing your overall experience.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact2')">Schedule a Consultation</span>
+        <div id="contact2" class="contact-info">
+          <strong>Contact:</strong> Jake Thompson<br>
+          Phone: (555) 881-2217<br>
+          Email: jake.thompson@callcenter.com
+        </div>
+      </div>
+    </div>
+
+    <!-- Listing 3 -->
+    <div class="listing-item">
+      <img src="JobImages/call3.webp" alt="Help Desk Technician">
+      <div class="listing-details">
+        <h2>Help Desk Technician</h2>
+        <p>Our help desk technicians are experts in resolving technical issues with hardware and software. From system setups to troubleshooting software malfunctions, our team ensures your technical challenges are resolved swiftly, so you can continue with your work or personal tasks without interruptions.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact3')">Inquire Now</span>
+        <div id="contact3" class="contact-info">
+          <strong>Contact:</strong> Lisa Green<br>
+          Phone: (555) 435-9930<br>
+          Email: lisa.green@helpdeskservices.com
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="../Market.html" class="back-button">← Back to Categories</a>
+  </div>
+
+  <script>
+    function toggleContact(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

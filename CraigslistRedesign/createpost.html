@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Post</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-container label {
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-container input,
+    .form-container textarea,
+    .form-container select {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .submit-btn {
+      background-color: #e65100;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      width: 100%;
+      border: none;
+    }
+
+    .submit-btn:hover {
+      background-color: #ff9800;
+    }
+
+    /* Success Popup */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      color: #e65100;
+    }
+
+    .popup button {
+      background-color: #e65100;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border: none;
+      margin-top: 1rem;
+    }
+
+    .popup button:hover {
+      background-color: #ff9800;
+    }
+  </style>
+</head>
+<body>
+  <h1>Create Post</h1>
+
+  <div class="form-container">
+    <form id="createPostForm" action="Market.html" method="POST" onsubmit="return showSuccessPopup();">
+      <label for="title">Post Title</label>
+      <input type="text" id="title" name="title" required placeholder="Enter the title of your post">
+
+      <label for="description">Post Description</label>
+      <textarea id="description" name="description" required placeholder="Enter a brief description of your post" maxlength="250"></textarea>
+
+      <label for="category">Select Category</label>
+      <select id="category" name="category" required>
+        <option value="automotive">Automotive</option>
+        <option value="beauty">Beauty</option>
+        <option value="accounting">Accounting</option>
+        <option value="customer-service">Customer Service</option>
+        <option value="antiques">Antiques</option>
+        <option value="furniture">Furniture</option>
+        <option value="computer">Computer</option>
+        <option value="creative">Creative</option>
+      </select>
+
+      <label for="image">Upload Image</label>
+      <input type="file" id="image" name="image" required accept="image/*">
+
+      <button type="submit" class="submit-btn">Post</button>
+    </form>
+  </div>
+
+  <!-- Success Popup -->
+  <div id="successPopup" class="popup">
+    <h2>Success!</h2>
+    <p>Your post has been created successfully.</p>
+    <button onclick="closePopup()">Okay</button>
+  </div>
+
+  <script>
+    // Function to show the success popup and prevent form submission initially
+    function showSuccessPopup() {
+      event.preventDefault(); // Prevent form from submitting immediately
+      document.getElementById('successPopup').style.display = 'block'; // Show success popup
+      setTimeout(function() {
+        window.location.href = "Market.html"; // Redirect after 2 seconds
+      }, 2000); // Redirect after 2 seconds
+    }
+
+    // Close the popup (triggered by the button)
+    function closePopup() {
+      document.getElementById('successPopup').style.display = 'none';
+      window.location.href = "Market.html"; // Redirect to market page
+    }
+  </script>
+</body>
+</html>

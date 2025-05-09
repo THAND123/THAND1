@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community Activities</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .listing-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .listing-item {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      padding: 1rem;
+      color: #333;
+      flex-wrap: wrap;
+    }
+
+    .listing-item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .listing-details {
+      margin-left: 1.5rem;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .listing-details h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #e65100;
+    }
+
+    .listing-details p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .listing-details button {
+      margin-top: 0.5rem;
+      background-color: #e65100;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .listing-details button:hover {
+      background-color: #ff9800;
+    }
+
+    .contact-info {
+      display: none;
+      background-color: #fff3e0;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      color: #333;
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffe0b2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+  <script>
+    function toggleContact(button) {
+      const infoDiv = button.nextElementSibling;
+      infoDiv.style.display = infoDiv.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+  <h1>Community Activities</h1>
+
+  <div class="listing-container">
+    <div class="listing-item">
+      <img src="Communityimages/picnic.jpg" alt="Picnic in the Park">
+      <div class="listing-details">
+        <h2>Community Picnic</h2>
+        <p>
+          Join us for a relaxing picnic in the park! Enjoy games, food, and good company while soaking up the sun. This family-friendly event is open to all ages. Feel free to bring your picnic basket, a blanket, and your favorite outdoor games! This is a great way to meet new people and enjoy the natural surroundings. Don’t forget to bring sunscreen!
+        </p>
+        <button onclick="toggleContact(this)">Learn More</button>
+        <div class="contact-info">
+          Event Organizer: Jane Doe<br>
+          Email: jane.doe@communityevents.com<br>
+          Phone: (859) 555-1010
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="Communityimages/yoga.avif" alt="Outdoor Yoga">
+      <div class="listing-details">
+        <h2>Outdoor Yoga Session</h2>
+        <p>
+          Embrace serenity and stretch your body at our outdoor yoga session. This free community class is suitable for all levels. Experience peaceful surroundings while practicing mindfulness and relaxation techniques. Bring your own mat, and come prepared for a rejuvenating session. Meet new friends and enjoy the great outdoors!
+        </p>
+        <button onclick="toggleContact(this)">Learn More</button>
+        <div class="contact-info">
+          Instructor: Emily Brown<br>
+          Email: emily.brown@yogacommunity.com<br>
+          Phone: (859) 555-2020
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="Communityimages/artsandcraft.jpg" alt="Arts & Crafts Workshop">
+      <div class="listing-details">
+        <h2>Arts & Crafts Workshop</h2>
+        <p>
+          Get creative at our arts and crafts workshop! Whether you're a beginner or an experienced artist, this hands-on event is a perfect opportunity to explore your creative side. You’ll learn new skills and create your own unique craft to take home. All materials will be provided. Ideal for families, friends, and anyone looking to try something new!
+        </p>
+        <button onclick="toggleContact(this)">Learn More</button>
+        <div class="contact-info">
+          Instructor: Sara Lee<br>
+          Email: sara.lee@craftsworkshop.com<br>
+          Phone: (859) 555-3030
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="../Market.html" class="back-button">← Back to Categories</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beauty Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .listing-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .listing-item {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      padding: 1rem;
+      color: #333;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .listing-item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .listing-details {
+      margin-left: 1.5rem;
+      max-width: 700px;
+    }
+
+    .listing-details h2 {
+      color: #e65100;
+      margin-top: 0;
+    }
+
+    .toggle-btn {
+      background-color: #e65100;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .toggle-btn:hover {
+      background-color: #ff9800;
+    }
+
+    .contact-info {
+      display: none;
+      background-color: #fff8dc;
+      padding: 0.6rem;
+      margin-top: 0.7rem;
+      border-radius: 6px;
+      color: #333;
+    }
+
+    .back-button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-button a {
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-button a:hover {
+      background-color: #ffe0b2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Beauty Services</h1>
+
+  <div class="listing-container">
+    <div class="listing-item">
+      <img src="ServiceImages/hairsalon.jpg" alt="Hair Stylist">
+      <div class="listing-details">
+        <h2>Luxury Hair Salon</h2>
+        <p>Our professional stylists offer haircuts, coloring, blowouts, and more using premium hair care products. Walk-ins welcome or book an appointment online. Serving all ages and hair types.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact1')">Contact Stylist</span>
+        <div id="contact1" class="contact-info">
+          Taylor Smith<br>
+          Phone: (555) 321-8790<br>
+          Email: taylor@stylelux.com
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="ServiceImages/nailsalon.jpg" alt="Nail Technician">
+      <div class="listing-details">
+        <h2>Glam Nail Boutique</h2>
+        <p>Full-service manicures, gel nails, acrylics, and pedicures in a clean and relaxing environment. Vegan polish and group packages available. Open daily until 9PM.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact2')">Contact Nail Tech</span>
+        <div id="contact2" class="contact-info">
+          Lani Rivera<br>
+          Phone: (555) 478-1234<br>
+          Email: glamnails@boutique.com
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="ServiceImages/makeupservice.jpg" alt="Makeup Artist">
+      <div class="listing-details">
+        <h2>On-Demand Makeup Services</h2>
+        <p>Book a professional makeup artist for weddings, photoshoots, or special events. We travel to you and tailor every look to your preferences and skin type.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact3')">Contact MUA</span>
+        <div id="contact3" class="contact-info">
+          Brianna Lee<br>
+          Phone: (555) 665-9981<br>
+          Email: bri@glowoncall.com
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-button">
+    <a href="../Market.html">← Back to Categories</a>
+  </div>
+
+  <script>
+    function toggleContact(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

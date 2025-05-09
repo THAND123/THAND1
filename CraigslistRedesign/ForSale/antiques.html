@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Antiques</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .listing-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .listing-item {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      padding: 1rem;
+      color: #333;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .listing-item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .listing-details {
+      margin-left: 1.5rem;
+      max-width: 700px;
+    }
+
+    .listing-details h2 {
+      color: #e65100;
+      margin-top: 0;
+    }
+
+    .toggle-btn {
+      background-color: #e65100;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .toggle-btn:hover {
+      background-color: #ff9800;
+    }
+
+    .contact-info {
+      display: none;
+      background-color: #fff8dc;
+      padding: 0.6rem;
+      margin-top: 0.7rem;
+      border-radius: 6px;
+      color: #333;
+    }
+
+    .back-button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-button a {
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-button a:hover {
+      background-color: #ffe0b2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Antiques</h1>
+
+  <div class="listing-container">
+
+    <div class="listing-item">
+      <img src="ForSaleImages/clock.jpg" alt="Antique Grandfather Clock">
+      <div class="listing-details">
+        <h2>18th Century Grandfather Clock</h2>
+        <p>This beautifully preserved grandfather clock features intricate woodwork, brass pendulum, and Roman numeral face. Crafted in the 1780s, it remains fully functional and is a statement piece for any vintage collector.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact1')">Contact Agent</span>
+        <div id="contact1" class="contact-info">
+          Henry Wallace<br>
+          Phone: (555) 893-4021<br>
+          Email: hwallace@heritagetimepieces.com
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="ForSaleImages/typewriter.jpg" alt="Vintage Typewriter">
+      <div class="listing-details">
+        <h2>1920s Remington Typewriter</h2>
+        <p>This vintage Remington typewriter from the roaring twenties remains in excellent working condition. A popular model among collectors, it’s perfect as a display piece or for functional, nostalgic use.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact2')">Contact Agent</span>
+        <div id="contact2" class="contact-info">
+          Dana Rivera<br>
+          Phone: (555) 702-1456<br>
+          Email: dana@vintagemarketfinds.com
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="ForSaleImages/vase.jpg" alt="Porcelain Vase">
+      <div class="listing-details">
+        <h2>Qing Dynasty Porcelain Vase</h2>
+        <p>This hand-painted porcelain vase originates from the Qing Dynasty and showcases blue floral motifs with gold detailing. An elegant addition to any antique ceramic collection, with authenticity documentation included.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact3')">Contact Agent</span>
+        <div id="contact3" class="contact-info">
+          Mei Lin<br>
+          Phone: (555) 667-2029<br>
+          Email: mei@easternantiques.com
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="back-button">
+    <a href="../Market.html">← Back to Categories</a>
+  </div>
+
+  <script>
+    function toggleContact(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

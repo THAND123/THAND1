@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apts / Housing</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .listing-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .listing-item {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      padding: 1rem;
+      color: #333;
+      flex-wrap: wrap;
+    }
+
+    .listing-item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .listing-details {
+      margin-left: 1.5rem;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .listing-details h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #e65100;
+    }
+
+    .listing-details p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .listing-details button {
+      margin-top: 0.5rem;
+      background-color: #e65100;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .listing-details button:hover {
+      background-color: #ff9800;
+    }
+
+    .contact-info {
+      display: none;
+      background-color: #fff3e0;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      color: #333;
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffe0b2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+  <script>
+    function toggleContact(button) {
+      const infoDiv = button.nextElementSibling;
+      infoDiv.style.display = infoDiv.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+  <h1>Apts / Housing</h1>
+
+  <div class="listing-container">
+    <div class="listing-item">
+      <img src="HousingImages/apartment.jpg" alt="Downtown Apartment">
+      <div class="listing-details">
+        <h2>Downtown 2BR Apartment</h2>
+        <p>
+          This downtown apartment features 2 spacious bedrooms, 1 updated bathroom, a large living room, a full kitchen with modern appliances, and a private balcony. Located within walking distance of shopping centers, coffee shops, and transit lines. Includes access to laundry facilities and on-site maintenance. Ideal for professionals or students. Rent is $1,200/month. Pets are allowed, and parking is available.
+        </p>
+        <button onclick="toggleContact(this)">View Listing</button>
+        <div class="contact-info">
+          Agent: Mark Winters<br>
+          Email: mark.winters@homerentals.com<br>
+          Phone: (513) 234-8765
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="HousingImages/studio.jpg" alt="Studio for Rent">
+      <div class="listing-details">
+        <h2>Studio Near Campus</h2>
+        <p>
+          Cozy studio ideal for NKU students. Located just a 10-minute walk from campus. Includes a single bedroom area, a compact kitchen, one bathroom, and a modest living space. Features a closet and natural lighting. Rent is $800/month. Rules include no pets, no smoking, and quiet hours after 10 PM. Perfect for focused students or minimalists seeking affordability and convenience.
+        </p>
+        <button onclick="toggleContact(this)">Apply Now</button>
+        <div class="contact-info">
+          Contact: Lisa Cho<br>
+          Email: lisa.cho@campusrentals.com<br>
+          Phone: (859) 301-4455
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="HousingImages/house.jpg" alt="House Rental">
+      <div class="listing-details">
+        <h2>3BR House in Suburbs</h2>
+        <p>
+          This spacious 3-bedroom house offers a quiet retreat just outside the city. Includes 3 bathrooms, a full kitchen, basement, garage, and backyard. Located in a family-friendly neighborhood with parks and schools nearby. Rent is $1600/month. Pets are allowed. No smoking or illegal activity permitted. Damage fines apply. Ideal for families or responsible renters seeking a long-term stay.
+        </p>
+        <button onclick="toggleContact(this)">Contact Owner</button>
+        <div class="contact-info">
+          Owner: Daniel Smith<br>
+          Email: dsmith@gmail.com<br>
+          Phone: (513) 987-1234
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="../Market.html" class="back-button">← Back to Categories</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community Childcare</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .listing-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .listing-item {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      padding: 1rem;
+      color: #333;
+    }
+
+    .listing-item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .listing-details {
+      margin-left: 1.5rem;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .listing-details h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #e65100;
+    }
+
+    .listing-details p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      max-height: 250px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .listing-details a {
+      text-decoration: none;
+      color: #e65100;
+      font-weight: 500;
+    }
+
+    .listing-details a:hover {
+      text-decoration: underline;
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffe0b2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Dropdown styling */
+    .contact-info {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #fff9c4; /* Light yellow */
+      border-radius: 8px;
+      font-weight: 500;
+    }
+
+    .contact-button {
+      padding: 0.8rem 1.5rem;
+      background-color: white;
+      color: #e65100;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      display: inline-block;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #ffe0b2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+
+  <script>
+    function toggleContactInfo(id) {
+      const contactInfo = document.getElementById(id);
+      if (contactInfo.style.display === "none" || contactInfo.style.display === "") {
+        contactInfo.style.display = "block";
+      } else {
+        contactInfo.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Community Childcare</h1>
+
+  <div class="listing-container">
+    <div class="listing-item">
+      <img src="Communityimages/daycare.jpg" alt="Daycare Service">
+      <div class="listing-details">
+        <h2>Sunshine Daycare</h2>
+        <p>Sunshine Daycare offers professional, qualified babysitters who provide the best care for your baby. Our hours are from 7 am to 8 pm. We specialize in nurturing children and providing a safe, engaging environment. Our staff is well-trained and CPR certified, ensuring your child is in good hands. You can count on us for flexible scheduling and affordable rates. Our facility is clean, spacious, and full of educational activities to support your child's development. We guarantee your child will enjoy every moment here!</p>
+
+
+        <a href="javascript:void(0)" class="contact-button" onclick="toggleContactInfo('contact-info-1')">Contact Me</a>
+        <div id="contact-info-1" class="contact-info">
+          <div>Phone: (123) 456-7890</div>
+          <div>Email: info@sunshinedaycare.com</div>
+          <div>Website: www.sunshinedaycare.com</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="Communityimages/babysitter.jpg" alt="Babysitting">
+      <div class="listing-details">
+        <h2>Evening Babysitter</h2>
+        <p>Reliable babysitter available for evening and weekend shifts. CPR certified and experienced in childcare for all ages. Offering flexible hours from 3:30 pm to 10 pm. Affordable rates and guaranteed trustworthiness. Looking to provide your child with a safe, comfortable environment in your own home. Reach out today for more details about my services and availability!</p>
+        <a href="javascript:void(0)" class="contact-button" onclick="toggleContactInfo('contact-info-2')">Contact Me</a>
+        <div id="contact-info-2" class="contact-info">
+          <div>Phone: (321) 654-0987</div>
+          <div>Email: sitter@eveningcare.com</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="Communityimages/afterschool.jpg" alt="After School Help">
+      <div class="listing-details">
+        <h2>Homework & Tutoring Help</h2>
+        <p>After-school tutoring available for children in grades 1 through 6. We cover math, reading, science, and other subjects to help your child succeed. Our tutors are experienced and dedicated to improving your child's academic performance. Sessions are personalized to meet the unique needs of each student. We aim to build confidence and develop skills that will help your child excel in school and beyond!</p>
+
+        <!-- Contact Information Button -->
+        <a href="javascript:void(0)" class="contact-button" onclick="toggleContactInfo('contact-info-3')">Contact Me</a>
+        <!-- Contact Information Dropdown -->
+        <div id="contact-info-3" class="contact-info">
+          <div>Phone: (987) 654-3210</div>
+          <div>Email: tutor@afterschoolhelp.com</div>
+          <div>Website: www.afterschoolhelp.com</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="../Market.html" class="back-button">← Back to Categories</a>
+  </div>
+</body>
+</html>

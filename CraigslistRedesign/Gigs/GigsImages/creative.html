@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .listing-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .listing-item {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      padding: 1rem;
+      color: #333;
+    }
+
+    .listing-item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .listing-details {
+      margin-left: 1.5rem;
+      max-width: 700px;
+    }
+
+    .listing-details h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #e65100;
+    }
+
+    .listing-details p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .toggle-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background-color: #e65100;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .toggle-btn:hover {
+      background-color: #ff9800;
+    }
+
+    .contact-info {
+      display: none;
+      margin-top: 0.7rem;
+      background-color: #f5f5f5;
+      color: #333;
+      padding: 0.6rem;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffe0b2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Creative Services</h1>
+
+  <div class="listing-container">
+    <!-- Listing 1 -->
+    <div class="listing-item">
+      <img src="graphic.jpg" alt="Graphic Design Service">
+      <div class="listing-details">
+        <h2>Graphic Design Services</h2>
+        <p>Our professional graphic design team offers high-quality services, including logo design, marketing materials, and digital media assets. Whether you're looking to redesign your brand or create something from scratch, we've got you covered.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact1')">Contact Seller</span>
+        <div id="contact1" class="contact-info">
+          <strong>Contact:</strong> John Doe<br>
+          Phone: (555) 123-4567<br>
+          Email: johndoe@creativeagency.com
+        </div>
+      </div>
+    </div>
+
+    <!-- Listing 2 -->
+    <div class="listing-item">
+      <img src="webdesign.jpg" alt="Web Design Service">
+      <div class="listing-details">
+        <h2>Web Design & Development</h2>
+        <p>Need a custom website? Our web designers and developers are here to help you create a visually appealing, functional website tailored to your business needs. Specializing in responsive design, e-commerce, and CMS-based websites.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact2')">Contact Seller</span>
+        <div id="contact2" class="contact-info">
+          <strong>Contact:</strong> Jane Smith<br>
+          Phone: (555) 234-5678<br>
+          Email: janesmith@websolutions.com
+        </div>
+      </div>
+    </div>
+
+    <!-- Listing 3 -->
+    <div class="listing-item">
+      <img src="photography.jpg" alt="Photography Service">
+      <div class="listing-details">
+        <h2>Photography & Videography</h2>
+        <p>Our experienced photographers and videographers can capture the essence of your brand, event, or product. From professional photo shoots to event coverage, we provide high-quality images and videos to help you stand out.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact3')">Contact Seller</span>
+        <div id="contact3" class="contact-info">
+          <strong>Contact:</strong> Mark Lee<br>
+          Phone: (555) 345-6789<br>
+          Email: marklee@mediaexperts.com
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="../Market.html" class="back-button">← Back to Categories</a>
+  </div>
+
+  <script>
+    function toggleContact(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

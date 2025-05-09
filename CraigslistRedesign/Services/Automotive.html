@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Automotive Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .listing-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .listing-item {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      padding: 1rem;
+      color: #333;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .listing-item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .listing-details {
+      margin-left: 1.5rem;
+      max-width: 700px;
+    }
+
+    .listing-details h2 {
+      color: #e65100;
+      margin-top: 0;
+    }
+
+    .toggle-btn {
+      background-color: #e65100;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .toggle-btn:hover {
+      background-color: #ff9800;
+    }
+
+    .contact-info {
+      display: none;
+      background-color: #fff8dc;
+      padding: 0.6rem;
+      margin-top: 0.7rem;
+      border-radius: 6px;
+      color: #333;
+    }
+
+    .back-button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-button a {
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-button a:hover {
+      background-color: #ffe0b2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Automotive Services</h1>
+
+  <div class="listing-container">
+    <div class="listing-item">
+      <img src="ServiceImages/mechanic.jpg" alt="Mechanic">
+      <div class="listing-details">
+        <h2>Reliable Auto Repairs</h2>
+        <p>We provide full-service car repairs and diagnostics using advanced tools. From oil changes and brake inspections to engine repair and tire alignment, our certified mechanics are here to keep your car running smoothly. Available Mon–Sat, 8AM–6PM.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact1')">Contact Mechanic</span>
+        <div id="contact1" class="contact-info">
+          John Davis<br>
+          Phone: (555) 342-7843<br>
+          Email: johnsauto@fixit.com
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="ServiceImages/carwash.jpg" alt="Car Wash">
+      <div class="listing-details">
+        <h2>Speedy Car Wash</h2>
+        <p>Quick and affordable car wash service with eco-friendly soap and vacuuming included. Open 7 days a week from 9AM to 8PM. We offer monthly memberships and discounts for multiple vehicles.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact2')">Contact Car Wash</span>
+        <div id="contact2" class="contact-info">
+          Maria Gonzalez<br>
+          Phone: (555) 984-2043<br>
+          Email: speedywash@cleanfast.com
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="ServiceImages/towingcar.webp" alt="Towing Service">
+      <div class="listing-details">
+        <h2>24/7 Towing Service</h2>
+        <p>Stranded on the road? We provide fast and affordable towing day or night. Serving the entire county with professional drivers and safe handling. Also offering battery jumps and tire changes.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact3')">Contact Towing</span>
+        <div id="contact3" class="contact-info">
+          Mike Robertson<br>
+          Phone: (555) 442-0987<br>
+          Email: towmike@roadrescue.com
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-button">
+    <a href="../Market.html">← Back to Categories</a>
+  </div>
+
+  <script>
+    function toggleContact(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

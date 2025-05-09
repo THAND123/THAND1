@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Furniture</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .listing-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .listing-item {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      padding: 1rem;
+      color: #333;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .listing-item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .listing-details {
+      margin-left: 1.5rem;
+      max-width: 700px;
+    }
+
+    .listing-details h2 {
+      color: #e65100;
+      margin-top: 0;
+    }
+
+    .toggle-btn {
+      background-color: #e65100;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .toggle-btn:hover {
+      background-color: #ff9800;
+    }
+
+    .contact-info {
+      display: none;
+      background-color: #fff8dc;
+      padding: 0.6rem;
+      margin-top: 0.7rem;
+      border-radius: 6px;
+      color: #333;
+    }
+
+    .back-button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-button a {
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-button a:hover {
+      background-color: #ffe0b2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Furniture</h1>
+
+  <div class="listing-container">
+
+    <div class="listing-item">
+      <img src="ForSaleImages/midcenturysofa.webp" alt="Modern Sofa">
+      <div class="listing-details">
+        <h2>Mid-Century Modern Sofa</h2>
+        <p>This stylish three-seater sofa features a walnut wood frame and soft gray upholstery. It blends comfort and minimalism, making it a perfect fit for contemporary or retro-inspired living spaces.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact1')">Contact Agent</span>
+        <div id="contact1" class="contact-info">
+          Sarah Kim<br>
+          Phone: (555) 321-7789<br>
+          Email: sarah@furnishmarket.com
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="ForSaleImages/OakTable.jpg" alt="Wood Dining Table">
+      <div class="listing-details">
+        <h2>Solid Oak Dining Table</h2>
+        <p>Handcrafted from durable oak, this large rectangular dining table seats up to eight people. The natural finish brings warmth to any dining room and pairs well with both traditional and modern chairs.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact2')">Contact Agent</span>
+        <div id="contact2" class="contact-info">
+          Jordan Ellis<br>
+          Phone: (555) 982-1345<br>
+          Email: jordan@oakcollective.com
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="ForSaleImages/LadderShelf.webp" alt="Bookshelf">
+      <div class="listing-details">
+        <h2>Rustic Ladder Bookshelf</h2>
+        <p>This 5-tier ladder-style bookshelf offers functional storage with a rustic charm. Made from reclaimed wood and metal piping, it’s great for displaying books, plants, and collectibles in any room.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact3')">Contact Agent</span>
+        <div id="contact3" class="contact-info">
+          Maya Lopez<br>
+          Phone: (555) 747-3321<br>
+          Email: maya@homestyledesigns.com
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="ForSaleImages/QueenSized.webp" alt="Wood Bed Frame">
+      <div class="listing-details">
+        <h2>Queen-Size Platform Bed</h2>
+        <p>Crafted with a solid pine frame and finished in dark espresso, this queen-size bed features a low-profile design and wooden slats that eliminate the need for a box spring. Stylish and durable.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact4')">Contact Agent</span>
+        <div id="contact4" class="contact-info">
+          Kyle Freeman<br>
+          Phone: (555) 224-8810<br>
+          Email: kfreeman@bednest.com
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="ForSaleImages/coffeetable.jpg" alt="Coffee Table">
+      <div class="listing-details">
+        <h2>Glass-Top Coffee Table</h2>
+        <p>This sleek coffee table features a tempered glass top and chrome legs, adding a touch of sophistication to your living room. The clear design keeps small spaces feeling open and airy.</p>
+        <span class="toggle-btn" onclick="toggleContact('contact5')">Contact Agent</span>
+        <div id="contact5" class="contact-info">
+          Olivia Chen<br>
+          Phone: (555) 813-4526<br>
+          Email: olivia@urbaninteriors.com
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="back-button">
+    <a href="../Market.html">← Back to Categories</a>
+  </div>
+
+  <script>
+    function toggleContact(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

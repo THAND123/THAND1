@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community Artists</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .listing-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .listing-item {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      padding: 1rem;
+      color: #333;
+      flex-wrap: wrap;
+    }
+
+    .listing-item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .listing-details {
+      margin-left: 1.5rem;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .listing-details h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #e65100;
+    }
+
+    .listing-details p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .listing-details button {
+      margin-top: 0.5rem;
+      background-color: #e65100;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .listing-details button:hover {
+      background-color: #ff9800;
+    }
+
+    .contact-info {
+      display: none;
+      background-color: #fff3e0;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      color: #333;
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffe0b2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+  <script>
+    function toggleContact(button) {
+      const infoDiv = button.nextElementSibling;
+      infoDiv.style.display = infoDiv.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+  <h1>Community Artists</h1>
+
+  <div class="listing-container">
+    <div class="listing-item">
+      <img src="Communityimages/artist1.jpg" alt="Local Painter">
+      <div class="listing-details">
+        <h2>Local Painter Exhibit</h2>
+        <p>
+          Experience the vibrant work of local painter Anna Brooks, showcasing a collection of contemporary pieces inspired by nature and urban life. The exhibit will run throughout the month at the City Art Gallery. Don’t miss this chance to explore new artistic visions and speak directly with the artist.
+        </p>
+        <button onclick="toggleContact(this)">Learn More</button>
+        <div class="contact-info">
+          Artist: Anna Brooks<br>
+          Email: anna.brooks@artstudio.com<br>
+          Phone: (859) 555-2244
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="Communityimages/musicartist.jpg" alt="Live Music Event">
+      <div class="listing-details">
+        <h2>Live Music Night</h2>
+        <p>
+          Join us for an unforgettable evening of live music with local bands at the Riverside Café! From indie rock to acoustic folk, enjoy a variety of performances from talented musicians. The event is free to attend, with food and drinks available for purchase. Perfect for music lovers of all kinds!
+        </p>
+        <button onclick="toggleContact(this)">Learn More</button>
+        <div class="contact-info">
+          Event Coordinator: Chris Turner<br>
+          Email: chris.turner@riversidecafe.com<br>
+          Phone: (859) 555-5567
+        </div>
+      </div>
+    </div>
+
+    <div class="listing-item">
+      <img src="Communityimages/sculptureartist.jpg" alt="Sculpture Artist Showcase">
+      <div class="listing-details">
+        <h2>Sculpture Artist Showcase</h2>
+        <p>
+          Discover the captivating sculptures of local artist David Ramirez. His works combine traditional and modern techniques, exploring themes of human emotion and form. The exhibit is being held at the Downtown Arts Center, featuring sculptures in various mediums including metal, clay, and stone.
+        </p>
+        <button onclick="toggleContact(this)">Learn More</button>
+        <div class="contact-info">
+          Artist: David Ramirez<br>
+          Email: david.ramirez@sculptures.com<br>
+          Phone: (859) 555-7788
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="../Market.html" class="back-button">← Back to Categories</a>
+  </div>
+</body>
+</html>

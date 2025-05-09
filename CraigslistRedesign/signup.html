@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In - Create Post</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      width: 300px;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 1rem 0;
+      border: 2px solid #e65100;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e64a19;
+    }
+
+    .back-button {
+      margin-top: 1rem;
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      background-color: #ffe0b2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sign In</h1>
+
+  <div class="form-container">
+    <form action="createpost.html" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+
+  <a href="Market.html" class="back-button">← Back to Marketplace</a>
+
+</body>
+</html>

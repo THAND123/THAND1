@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Set Your Location</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e65100, #ffb74d);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .form-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+    }
+
+    input[type="text"], input[type="number"] {
+      padding: 0.8rem;
+      margin: 1rem 0;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between; 
+      gap: 1rem; 
+    }
+
+    button, a.back-button {
+      background-color: white;
+      color: #ff8c00;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover, a.back-button:hover {
+      background-color: #ffe0b2;
+      color: #e65100;
+    }
+
+    .back-button {
+      background-color: white;
+      color: #e65100;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Where are you located?</h2>
+    <form action="Market.html" method="get">
+      <input type="text" name="location" placeholder="Enter your city or ZIP code" required />
+      <br/>
+      <input type="number" name="distance" placeholder="How many miles are you willing to travel?" required min="1"/>
+      <br/>
+      <div class="button-container">
+        <a href="Home.page.html" class="back-button">← Back</a>
+        <button type="submit">Find Listings</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
